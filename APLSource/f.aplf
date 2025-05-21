@@ -1,0 +1,16 @@
+ f←{
+ ⍝ interpolated string, similar to Python, e.g.
+ ⍝ (A B)←2 4
+ ⍝ f'{A} + {B} = {A+B}'  =>  '2 + 2 = 4'
+ ⍝ optional ⍺ is context
+     b←'{}'∘.=⍵
+     0=+/1⌷b:⍵ ⍝ none
+     1≠⌈/+\1 ¯1+.×b:⍵⊣'unbalanced brackets'⎕SIGNAL DEBUG/123 ⍝ not balanced
+     s←1↓¨('⌹',⍵)⊂⍨1,∨⌿b ⍝ segments
+     i←2×⍳+/1⌷b
+     ⍺←⊃⎕RSI ⍝ calling context
+     0::⍵⊣(1⊃⎕DM)⎕SIGNAL DEBUG/⎕EN
+     6::⍵⊣('value error: ',{⍵↓⍨' '⍳⍨⍵}2⊃⎕DM)⎕SIGNAL DEBUG/6
+     s[i]←⍕¨⍺⍎¨s[i]
+     ∊s
+ }
