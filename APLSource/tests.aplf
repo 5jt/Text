@@ -23,4 +23,4 @@
  ec+←⎕THIS(f T.match'2 + 3 = 5')'{A} + {B} = {A+B}'
  ec+←⎕THIS(f T.match'See: 2 + 3 = 5')'See: {A} + {B} = {A+B}'
 
- ⎕←(1+×ec)⊃('All tests passed')((⍕ec),' test/s failed')
+ ⎕←T.report ec

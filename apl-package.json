@@ -1,7 +1,7 @@
 {
   api: "API",
   assets: "",
-  description: "Function for interpolating values into a string",
+  description: "Interpolated string resembling Python’s ",
   documentation: "https://github.com/5jt/Text",
   files: "",
   group: "sjt",
@@ -9,7 +9,7 @@
   license: "MIT",
   lx: "",
   maintainer: "Stephen Taylor <sjt@5jt.com>",
-  minimumAplVersion: "18.2",
+  minimumAplVersion: "20.0",
   ml: 1,
   name: "text",
   os_lin: 1,
@@ -19,5 +19,5 @@
   source: "APLSource",
   tags: "interpolate,string,text",
   userCommandScript: "",
-  version: "0.1.0+0",
+  version: "0.1.0+2",
 }
